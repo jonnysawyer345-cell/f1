@@ -1,0 +1,306 @@
+/* Base reset-ish */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", system-ui, sans-serif;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 16px;
+}
+
+/* Phone frame */
+.app-frame {
+  width: 100%;
+  max-width: 430px;
+  background-color: #050509;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+/* Status bar */
+.status-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 14px 4px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+.status-icons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Top nav */
+.top-nav {
+  padding: 4px 16px 10px;
+  border-bottom: 1px solid #1b1b1f;
+}
+
+.top-nav h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.top-nav-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: #aaa;
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.nav-link-active {
+  color: #fff;
+  border-bottom: 2px solid #fff;
+}
+
+/* Map section */
+.map-section {
+  padding: 12px 16px 0;
+}
+
+.map-placeholder {
+  background: #111;
+  border-radius: 16px;
+  padding: 16px;
+  border: 1px solid #26262b;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.map-label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.map-sub {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* Ticket confirmation */
+.ticket-confirmation {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #1b1b1f;
+}
+
+.ticket-confirmation-left {
+  flex: 2;
+}
+
+.ticket-date-time {
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.ticket-title {
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.ticket-venue {
+  font-size: 12px;
+  color: #aaa;
+}
+
+.ticket-confirmation-right {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+
+.you-got-tickets {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.share-text {
+  font-size: 11px;
+  color: #bbb;
+}
+
+.btn-primary {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: none;
+  background: #f25a2b;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Divider */
+.divider {
+  height: 8px;
+  background: #050509;
+}
+
+/* Ticket view */
+.ticket-view {
+  padding: 0 16px 16px;
+}
+
+/* Banner */
+.ticket-banner {
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.banner-image-placeholder {
+  background: radial-gradient(circle at top, #f25a2b, #1b1b1f);
+  border-radius: 18px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #eee;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.banner-overlay {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  right: 12px;
+}
+
+.banner-event-name {
+  font-size: 11px;
+  font-weight: 600;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.banner-location {
+  font-size: 10px;
+  color: #ddd;
+}
+
+/* Ticket card */
+.ticket-card {
+  background: #101018;
+  border-radius: 18px;
+  padding: 14px 14px 12px;
+  border: 1px solid #26262b;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ticket-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.ticket-type {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ticket-subtype {
+  font-size: 12px;
+  color: #bbb;
+}
+
+.ticket-code-block {
+  text-align: right;
+}
+
+.ticket-code-label {
+  display: block;
+  font-size: 10px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ticket-code-value {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* Ticket rows */
+.ticket-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.ticket-field {
+  min-width: 45%;
+  flex: 1;
+}
+
+.field-label {
+  display: block;
+  font-size: 10px;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 2px;
+}
+
+.field-value {
+  font-size: 12px;
+  color: #eee;
+}
+
+/* Buttons inside ticket */
+.btn-secondary,
+.btn-ghost {
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-secondary {
+  border: none;
+  background: #fff;
+  color: #000;
+}
+
+.btn-ghost {
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+}
+
+/* Small screens */
+@media (max-width: 380px) {
+  .ticket-confirmation {
+    flex-direction: column;
+  }
+
+  .ticket-confirmation-right {
+    align-items: flex-start;
+  }
+}
